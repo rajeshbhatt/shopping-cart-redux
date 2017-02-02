@@ -19,7 +19,13 @@ const makeSelectCatalog = () => createSelector(
   (substate) => substate.toJS()
 );
 
+const productCatalog = () => createSelector(
+  selectCatalogDomain(),
+  (substate) => substate.toJS()
+);
+
 export default makeSelectCatalog;
 export {
   selectCatalogDomain,
+  productCatalog
 };

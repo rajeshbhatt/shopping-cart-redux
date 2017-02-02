@@ -60,7 +60,29 @@ export default function createRoutes(store) {
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, sagas, component]) => {
-          injectReducer('home', reducer.default);
+          injectReducer('account', reducer.default);
+          injectSagas(sagas.default);
+
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/catalog',
+      name: 'Catalog',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Catalog/reducer'),
+          import('containers/Catalog/sagas'),
+          import('containers/Catalog'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('catalog', reducer.default);
           injectSagas(sagas.default);
 
           renderRoute(component);

@@ -37,6 +37,10 @@ function checkStatus(response) {
  * @return {object}           The response data
  */
 export default function request(url, options) {
+  const BASE_URL = 'http://localhost:1337';
+  url = BASE_URL + url;
+  options.headers = {};
+  options['Access-Control-Allow-Origin'] =  '*'; 
   return fetch(url, options)
     .then(checkStatus)
     .then(parseJSON);

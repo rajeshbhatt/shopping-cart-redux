@@ -18,4 +18,8 @@ export default defineMessages({
     id: 'boilerplate.components.Header.account',
     defaultMessage: 'My Account',
   },
+  catalog: {
+    id: 'boilerplate.components.Header.catalog',
+    defaultMessage: 'Catalog',
+  },
 });
