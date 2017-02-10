@@ -11,6 +11,7 @@ function Footer() {
     <Wrapper>
       <section>
         <FormattedMessage {...messages.licenseMessage} />
+        <p>Contact US!</p>
       </section>
     </Wrapper>
   );

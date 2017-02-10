@@ -7,19 +7,19 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   home: {
-    id: 'boilerplate.components.Header.home',
-    defaultMessage: 'Home',
+    id: 'boilerplate.components.Header.women',
+    defaultMessage: 'Women',
   },
   features: {
-    id: 'boilerplate.components.Header.features',
-    defaultMessage: 'Features',
+    id: 'boilerplate.components.Header.men',
+    defaultMessage: 'Men',
   },
   account: {
-    id: 'boilerplate.components.Header.account',
-    defaultMessage: 'My Account',
+    id: 'boilerplate.components.Header.kids',
+    defaultMessage: 'Kids',
   },
   catalog: {
-    id: 'boilerplate.components.Header.catalog',
-    defaultMessage: 'Catalog',
+    id: 'boilerplate.components.Header.HomeandLiving',
+    defaultMessage: 'Home & Living',
   },
 });

@@ -13,10 +13,12 @@ const imgStyle = {
 }
 const itemContainer = {
   padding: '5px',
-  border: '1px solid',
+  border: '1px solid #c5c5c5',
   overflow: 'hidden',
   width: '250px',
-  display: 'inline-block'
+  display: 'inline-block',
+  marginRight: '5px',
+  boxSizing: 'border-box'
 }
 class Product extends React.Component{
   constructor(props) {
@@ -26,12 +28,14 @@ class Product extends React.Component{
     var url = 'http://static1.jassets.com/p/'+ this.props.data.image  + '.jpg';  // @todo remove this
     return (
       <div style={itemContainer}>
-        <div className="p-img-container" style={divStyle}>
-          <img src={url} alt="Product Image" style={imgStyle}/>
-          <article>
-            Product desc testing
-          </article>
-        </div>
+        <Link to="/" activeStyle={{ color: 'red' }}>
+          <div className="p-img-container" style={divStyle}>
+            <img src={url} alt="Product Image" style={imgStyle}/>
+            <article>
+              Product desc testing
+            </article>
+          </div>
+        </Link>
       </div>
     )
   }

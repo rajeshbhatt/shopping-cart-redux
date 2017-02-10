@@ -9,12 +9,13 @@ import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import ImgCarousel from './../../components/common/ImgCarousel';
+
 
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
 import AtPrefix from './AtPrefix';
-import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
 import Section from './Section';
@@ -46,39 +47,16 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         <Helmet
           title="Home Page"
           meta={[
-            { name: 'description', content: 'A React.js Boilerplate application homepage' },
+            { name: 'description', content: 'Bhasad Bazar' },
           ]}
         />
-        <div>
-          <CenteredSection>
-            <H2>
-              <FormattedMessage {...messages.startProjectHeader} />
-            </H2>
-            <p>
-              <FormattedMessage {...messages.startProjectMessage} />
-            </p>
-          </CenteredSection>
-          <Section>
-            <H2>
-              <FormattedMessage {...messages.trymeHeader} />
-            </H2>
-            <Form onSubmit={this.props.onSubmitForm}>
-              <label htmlFor="username">
-                <FormattedMessage {...messages.trymeMessage} />
-                <AtPrefix>
-                  <FormattedMessage {...messages.trymeAtPrefix} />
-                </AtPrefix>
-                <Input
-                  id="username"
-                  type="text"
-                  placeholder="mxstbr"
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
-                />
-              </label>
-            </Form>
-            <ReposList {...reposListProps} />
-          </Section>
+      <div>
+        <Section className="primary-banner">
+          <ImgCarousel></ImgCarousel>
+        </Section>
+        <section className="secondary-banner">
+            
+        </section>
         </div>
       </article>
     );

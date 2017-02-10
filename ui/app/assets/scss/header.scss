@@ -1,0 +1,61 @@
+body{
+  position: relative;
+}
+li {
+  display: inline-block;
+}
+.top-nav li {
+  &.ds{
+    display: block;
+    width: 1000px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 9999;
+  }
+}
+.container-nav {
+  display: block;
+  padding: 20px;
+  margin: 20px;
+  float:left;
+  display: none;
+  width: 1300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 9999;
+
+  &.hover {
+    display: block;
+
+  }
+  div {
+    float: left;
+  }
+  a {
+    display: block;
+  }
+}
+.title {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.link-drill-down {
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.top-nav{
+  display: inline-block;
+  width: 50%;
+}
+.top-nav li{
+  position: static;
+  padding: 5px;
+}
+.top-nav li a:hover + .container-nav {
+    display: block;
+}
